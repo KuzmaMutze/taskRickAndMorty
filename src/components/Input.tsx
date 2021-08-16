@@ -13,7 +13,7 @@ export const Input: React.FC = () => {
 
   useEffect(() => {
     if (debouncedSearchTerm && debouncedSearchTerm.length >= 2) {
-      dispatch(fetchCharacterByFilter({ search: debouncedSearchTerm, page }));
+      dispatch(fetchCharacterByFilter({ search: debouncedSearchTerm, page: 1 }));
     } else if (!debouncedSearchTerm) {
       dispatch(fetchCharacter(page));
     }
