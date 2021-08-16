@@ -1,0 +1,19 @@
+.page {
+  margin: 5px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: rgb(104, 104, 253);
+  border-radius: 4px;
+  color: #fff;
+  &__btn {
+    background-color: rgb(104, 104, 253);
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+    padding: 10px;
+  }
+}
+
+.pagination {
+  margin-top: 50px;
+}

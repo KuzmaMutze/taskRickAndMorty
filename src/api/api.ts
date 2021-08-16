@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { CharactersAllType, CharacterType, ResultData } from './types';
 
 export enum ResultCodesEnum {
   Success = 200,
@@ -10,10 +11,12 @@ export const instance = axios.create({
 });
 
 export const charactersAPI = {
-  getAllCharacters() {
-    return instance.get('character');
+  getAllCharacters(page: number) {
+    return instance.get(`character/?page=${page}`);
   },
-  getCharacterByFilter(filter: string) {
-    return instance.get(filter ? `character/?name=${filter}` : 'character');
+  getCharacterByFilter(filter: string, page: number) {
+    return instance.get(
+      filter ? `character/?name=${filter}&page=${page}` : `character/?page=${page}`,
+    );
   },
 };

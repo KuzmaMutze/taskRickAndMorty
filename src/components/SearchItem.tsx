@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { selectAllCharacters, selectIsLoading } from '../redux/selectors/selectAllCharacters';
 import { Card } from './Card';
 import { Input } from './Input';
+import { Pagination } from './Pagination';
 
 export const SearchItem: React.FC = () => {
   const characters = useSelector(selectAllCharacters);
@@ -11,6 +12,7 @@ export const SearchItem: React.FC = () => {
   return (
     <div className="search-item">
       <Input />
+      <Pagination />
       {!isLoading ? (
         <div className="search-item__cards">
           {characters.map((item) => (
