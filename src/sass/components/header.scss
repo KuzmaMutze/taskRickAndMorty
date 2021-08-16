@@ -1,0 +1,29 @@
+.header {
+  height: 40px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: $bg-header;
+
+  &__btns {
+    width: 50px;
+    position: relative;
+    top: 13px;
+    left: 10px;
+    display: flex;
+    justify-content: space-between;
+    .btn {
+      display: block;
+      cursor: pointer;
+      width: 10px;
+      height: 10px;
+      background-color: gray;
+      border-radius: 100%;
+    }
+  }
+}
+
+h1 {
+  text-align: center;
+  color: $title;
+  font-weight: 100;
+}

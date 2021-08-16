@@ -1,0 +1,10 @@
+@import 'libs/reset.scss';
+@import 'fonts.scss';
+@import 'variables.scss';
+
+@import 'components/all';
+
+h1,
+div {
+  font-family: 'Roboto', sans-serif;
+}

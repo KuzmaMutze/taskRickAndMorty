@@ -1,0 +1,47 @@
+.card {
+  margin: 15px;
+  cursor: pointer;
+}
+
+.info {
+  display: none;
+  width: 161px;
+  position: absolute;
+  text-align: start;
+  z-index: 10;
+  background-color: $subtitleBg;
+  margin-top: 25px;
+  padding: 7px;
+  box-shadow: 0px 0px 15px 9px rgba(34, 60, 80, 0.2);
+  font-weight: 900;
+}
+
+.info::before {
+  content: ' ';
+  position: absolute;
+  z-index: 5;
+  box-shadow: -7px -7px 10px -4px rgb(34 60 80 / 20%);
+  width: 0;
+  height: 0;
+  left: 40%;
+  top: -16px;
+  transform: rotate(45deg) translate(5%);
+  border: 15px solid;
+  border-color: $subtitleBg transparent transparent $subtitleBg;
+}
+
+// content: '';
+//   position: absolute; /* Абсолютное позиционирование */
+//   box-shadow: 0px 0px 1px 9px rgba(34, 60, 80, 0.2);
+
+//   left: 50%;
+//   top: -40px;
+//   transform: rotate(180deg) translate(50%);
+//   border: 20px solid transparent;
+//   border-top: 20px solid $subtitleBg;
+
+.card:hover {
+  .info {
+    display: block;
+  }
+}
